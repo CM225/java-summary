@@ -2,21 +2,23 @@ package com.java.sort;
 
 import java.util.Arrays;
 
+/***
+ * 快速排序
+ * 思想：选定一个元素，把比该元素小的元素排到前面，比该元素大的数排到后面，
+ * 然后从前面的这一堆数据中进行重复操作。待前面排序结束后开始后面的排序。
+ * 排序：小到大
+ */
 public class QuickSort {
     public static void main(String[] args) {
 
-
         int arr[] = {7, 5, 3, 2, 4, 1, 8, 9, 6};
 
-
-        //快速排序
         int low = 0;
         int high = arr.length - 1;
         quickSort(arr, low, high);
 
         System.out.println(Arrays.toString(arr));
     }
-
 
     public static void quickSort(int[] arr, int low, int high) {
         //如果指针在同一位置(只有一个数据时)，退出
